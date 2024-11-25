@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Art Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .filters {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .filters h3 {
+            color: #333;
+        }
+
+        .filter-group {
+            margin-bottom: 15px;
+        }
+
+        .filter-group label {
+            margin-right: 10px;
+        }
+
+        .art-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .art-piece {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .art-piece img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .art-piece h3 {
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .artist, .style, .price {
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .price {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Welcome to the Digital Art Gallery</h1>
+    </div>
+
+    <div class="container">
+        <!-- Filters -->
+        <div class="filters">
+            <h3>Filter Artworks</h3>
+
+            <div class="filter-group">
+                <h4>Price Range</h4>
+                <label><input type="checkbox" name="price" value="5000-10000"> ₹5000 - ₹10000</label>
+                <label><input type="checkbox" name="price" value="10000-15000"> ₹10000 - ₹15000</label>
+                <label><input type="checkbox" name="price" value="15000-20000"> ₹15000 - ₹20000</label>
+                <label><input type="checkbox" name="price" value="20000-25000"> ₹20000 - ₹25000</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Style</h4>
+                <label><input type="checkbox" name="style" value="Abstract"> Abstract</label>
+                <label><input type="checkbox" name="style" value="Impressionism"> Impressionism</label>
+                <label><input type="checkbox" name="style" value="Surrealism"> Surrealism</label>
+                <label><input type="checkbox" name="style" value="Realism"> Realism</label>
+            </div>
+        </div>
+
+        <!-- Art Grid -->
+        <div class="art-grid">
+            <!-- Art piece 1 -->
+            <div class="art-piece">
+                <img src="https://static.wixstatic.com/media/3af17e_230ce4c22bef468382f85c8fa42bf1b7~mv2.jpg/v1/fill/w_625,h_625,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/3af17e_230ce4c22bef468382f85c8fa42bf1b7~mv2.jpg" alt="Art 1">
+                <h3>Starry Night</h3>
+                <p class="artist"><strong>Artist:</strong> Vincent van Gogh</p>
+                <p class="style"><strong>Style:</strong> Post-Impressionism</p>
+                <p class="price">₹15000</p>
+            </div>
+
+            <!-- Art piece 2 -->
+            <div class="art-piece">
+                <img src="https://static.wixstatic.com/media/3af17e_fdf15b561f2241d1819ee03a110dee02~mv2.jpg/v1/fill/w_625,h_625,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/3af17e_fdf15b561f2241d1819ee03a110dee02~mv2.jpg" alt="Art 2">
+                <h3>The Persistence of Memory</h3>
+                <p class="artist"><strong>Artist:</strong> Salvador Dalí</p>
+                <p class="style"><strong>Style:</strong> Surrealism</p>
+                <p class="price">₹12000</p>
+            </div>
+
+            <!-- Art piece 3 -->
+            <div class="art-piece">
+                <img src="https://static.wixstatic.com/media/3af17e_5d0661fec12e469181c80d13699b0f54~mv2.jpg/v1/fill/w_625,h_625,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/3af17e_5d0661fec12e469181c80d13699b0f54~mv2.jpg" alt="Art 3">
+                <h3>Abstract Composition</h3>
+                <p class="artist"><strong>Artist:</strong> Wassily Kandinsky</p>
+                <p class="style"><strong>Style:</strong> Abstract</p>
+                <p class="price">₹8000</p>
+            </div>
+
+            <!-- Additional Art Piece 4 -->
+            <div class="art-piece">
+                <img src="https://static.wixstatic.com/media/3af17e_6a4a86800db64654a2d59ba028331a60~mv2.jpg/v1/fill/w_625,h_625,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/3af17e_6a4a86800db64654a2d59ba028331a60~mv2.jpg" alt="Art 4">
+                <h3>Garden of Dreams</h3>
+                <p class="artist"><strong>Artist:</strong> Claude Monet</p>
+                <p class="style"><strong>Style:</strong> Impressionism</p>
+                <p class="price">₹22000</p>
+            </div>
+
+            <!-- Additional Art Piece 5 -->
+            <div class="art-piece">
+                <img src="https://static.wixstatic.com/media/3af17e_6c8eff0613794a738e4e8e71865a076a~mv2.jpg/v1/fill/w_625,h_625,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/3af17e_6c8eff0613794a738e4e8e71865a076a~mv2.jpg" alt="Art 5">
+                <h3>Modern Abstraction</h3>
+                <p class="artist"><strong>Artist:</strong> Piet Mondrian</p>
+                <p class="style"><strong>Style:</strong> Abstract</p>
+                <p class="price">₹18000</p>
+            </div>
+
+            <!-- Additional Art Piece 6 -->
+            <div class="art-piece">
+                <img src="https://static.wixstatic.com/media/3af17e_42c0e027b58d466dbf5ea36dfdf4c423~mv2.jpg/v1/fill/w_625,h_625,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/3af17e_42c0e027b58d466dbf5ea36dfdf4c423~mv2.jpg" alt="Art 6">
+                <h3>The Scream</h3>
+                <p class="artist"><strong>Artist:</strong> Edvard Munch</p>
+                <p class="style"><strong>Style:</strong> Expressionism</p>
+                <p class="price">₹25000</p>
+            </div>
+
+            <!-- Additional Art Piece 7 -->
+            <div class="art-piece">
+                <img src="https://static.wixstatic.com/media/3af17e_6444a656a446496fa86fb138f03918f8~mv2.jpg/v1/fill/w_625,h_625,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/3af17e_6444a656a446496fa86fb138f03918f8~mv2.jpg" alt="Art 7">
+                <h3>New Dawn</h3>
+                <p class="artist"><strong>Artist:</strong> Anonymous</p>
+                <p class="style"><strong>Style:</strong> Abstract</p>
+                <p class="price">₹9000</p>
+            </div>
+
+            <!-- Additional Art Piece 8 -->
+            <div class="art-piece">
+                <img src="https://static.wixstatic.com/media/3af17e_e7f2179b28834967b6688f098f6c519d~mv2.jpg/v1/fill/w_625,h_625,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/3af17e_e7f2179b28834967b6688f098f6c519d~mv2.jpg" alt="Art 8">
+                <h3>The Golden Horizon</h3>
+                <p class="artist"><strong>Artist:</strong> John Doe</p>
+                <p class="style"><strong>Style:</strong> Realism</p>
+                <p class="price">₹11000</p>
+            </div>
+
+            <!-- Additional Art Piece 9 -->
+            <div class="art-piece">
+                <img src="https://static.wixstatic.com/media/3af17e_d9ba7ab7875e473aaee9b2b70f4d7ec6~mv2.jpg/v1/fill/w_625,h_625,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/3af17e_d9ba7ab7875e473aaee9b2b70f4d7ec6~mv2.jpg" alt="Art 9">
+                <h3>Night Sky</h3>
+                <p class="artist"><strong>Artist:</strong> Mary Johnson</p>
+                <p class="style"><strong>Style:</strong> Impressionism</p>
+                <p class="price">₹14000</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
